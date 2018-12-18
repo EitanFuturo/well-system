@@ -1,0 +1,9 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @area.name %> <br>
+  <strong>Unidad de Negocio:</strong>
+  <%= @area.business_unit.name %>
+</p>
+
+<%= link_to 'Editar', edit_area_path(@area) %> |
+<%= link_to 'Atrás', areas_path %>

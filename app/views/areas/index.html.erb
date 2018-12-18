@@ -1,0 +1,21 @@
+<h1>Áreas</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th colspan="1"></th>
+  </tr>
+
+  <% @areas.each do |area| %>
+    <tr>
+      <td><%= area.name %></td>
+      <td><%= link_to 'Mostrar', area_path(area) %></td>
+      <td><%= link_to 'Editar', edit_area_path(area) %></td>
+      <td><%= link_to 'Eliminar', area_path(area),
+                      method: :delete,
+                      data: { confirm: '¿Estás seguro?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Nuevo', new_area_path %>

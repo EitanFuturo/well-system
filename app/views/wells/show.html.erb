@@ -1,0 +1,13 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @well.name %> <br>
+  <strong>Profundidad:</strong>
+  <%= @well.depth %> <br>
+  <strong>Área:</strong>
+  <%= @well.area.name %> <br>
+  <strong>Yacimiento:</strong>
+  <%= @well.field.name %>
+</p>
+
+<%= link_to 'Editar', edit_well_path(@well) %> |
+<%= link_to 'Atrás', wells_path %>

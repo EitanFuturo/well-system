@@ -1,0 +1,25 @@
+<%= form_for @business_unit do |u| %>
+
+  <% if @business_unit.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@business_unit.errors.count, "error") %> impiden guardar esta unidad de negocio:
+      </h2>
+      <ul>
+        <% @business_unit.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= u.label :Nombre %><br>
+    <%= u.text_field :name %>
+  </p>
+
+  <p>
+    <%= u.submit %>
+  </p>
+
+<% end %>

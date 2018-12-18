@@ -1,0 +1,21 @@
+<h1>Unidades de Negocio</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th colspan="1"></th>
+  </tr>
+
+  <% @business_units.each do |unit| %>
+    <tr>
+      <td><%= unit.name %></td>
+      <td><%= link_to 'Mostrar', business_unit_path(unit) %></td>
+      <td><%= link_to 'Editar', edit_business_unit_path(unit) %></td>
+      <td><%= link_to 'Eliminar', business_unit_path(unit),
+                      method: :delete,
+                      data: { confirm: '¿Estás seguro?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Nuevo', new_business_unit_path %>

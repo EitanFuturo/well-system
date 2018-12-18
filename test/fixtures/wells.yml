@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  depth: 9.99
+  area_id: 
+  field_id: 
+
+two:
+  name: MyString
+  depth: 9.99
+  area_id: 
+  field_id: 
