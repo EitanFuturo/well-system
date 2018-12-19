@@ -1,0 +1,35 @@
+es:
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      blank: "no puede estar vacío."
+
+  activerecord:
+    models:
+      well:
+        one: 'Pozo'
+        others: 'Pozos'
+      area:
+        one: 'Área'
+        others: 'Áreas'
+      field:
+        one: 'Yacimiento'
+        others: 'Yacimientos'
+      business_unit:
+        one: 'Unidad de Negocio'
+        others: 'Unidades de Negocio'
+    attributes:
+      business_unit:
+        name: 'Nombre'
+      well:
+        name: 'Nombre'
+      area:
+        name: 'Nombre'
+      field:
+        name: 'Nombre'
+
+
+
+  helpers:
+    submit:
+      create: 'Crear %{model}'
