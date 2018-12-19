@@ -3,7 +3,7 @@
   <% if @well.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@well.errors.count, "error") %> impiden guardar esta unidad de negocio:
+        <%= pluralize(@well.errors.count, "error") %> impiden guardar este pozo:
       </h2>
       <ul>
         <% @well.errors.full_messages.each do |msg| %>

@@ -1,6 +1,15 @@
 <p>
   <strong>Nombre:</strong>
-  <%= @field.name %>
+  <%= @field.name %> <br>
+
+  <% if @field.wells.any? %>
+    <strong>Pozos relacionados:</strong>
+    <ul>
+      <% @field.wells.each do |w| %>
+        <li><%= w.name %></li>
+      <% end %>
+    </ul>
+  <% end %>
 </p>
 
 <%= link_to 'Editar', edit_field_path(@field) %> |

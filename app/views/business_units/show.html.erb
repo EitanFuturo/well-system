@@ -1,7 +1,17 @@
 <p>
   <strong>Nombre:</strong>
-  <%= @business_unit.name %>
+  <%= @business_unit.name %> <br>
+
+  <% if @business_unit.areas.any? %>
+    <strong>Áreas relacionadas:</strong>
+  <ul>
+    <% @business_unit.areas.each do |a| %>
+      <li><%= a.name %></li>
+    <% end %>
+  </ul>
+<% end %>
 </p>
+
 
 <%= link_to 'Editar', edit_business_unit_path(@business_unit) %> |
 <%= link_to 'Atrás', business_units_path %>

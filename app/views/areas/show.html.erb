@@ -2,7 +2,16 @@
   <strong>Nombre:</strong>
   <%= @area.name %> <br>
   <strong>Unidad de Negocio:</strong>
-  <%= @area.business_unit.name %>
+  <%= @area.business_unit.name %> <br>
+
+  <% if @area.wells.any? %>
+    <strong>Pozos relacionados:</strong>
+  <ul>
+    <% @area.wells.each do |w| %>
+      <li><%= w.name %></li>
+    <% end %>
+  </ul>
+<% end %>
 </p>
 
 <%= link_to 'Editar', edit_area_path(@area) %> |
